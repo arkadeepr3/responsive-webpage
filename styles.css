@@ -1,0 +1,125 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Fixed Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-content {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-title {
+  font-size: 24px;
+  flex-grow: 1;  /* This ensures that the title takes the available space */
+  text-align: center; /* Center the title */
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+/* Main Container Styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+/* Left Menu Styles */
+.left-menu {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for collapsing */
+}
+
+.left-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.left-menu li:hover {
+  background-color: #ddd;
+}
+
+/* Main Content Area Styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Right Panel Styles */
+.right-panel {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .left-menu, .right-panel {
+      width: 100%;
+      height: auto;
+  }
+
+  .main-content {
+      margin: 10px 0;
+  }
+}
