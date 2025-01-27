@@ -12,5 +12,5 @@ This project is a responsive webpage with a fixed navbar, collapsible menu, and 
 ## How to Run
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/<repository-name>.git
+   git clone https://github.com/arkadeepr3/responsive-webpage.git
 
